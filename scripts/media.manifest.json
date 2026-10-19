@@ -1,0 +1,35 @@
+{
+  "$comment": "Source: official Warframe Fan Kit (Digital Extremes), unzipped to raw/fankit. Only logo-free images are listed; crops remove any remaining marks. Run `npm run media` to regenerate public/media.",
+  "source": "raw/fankit",
+  "backgrounds": {
+    "widths": [1280, 2400],
+    "items": {
+      "orbit": { "file": "Images/Skyboxes/Empyrean.jpg" },
+      "moon-ruins": { "file": "Images/Skyboxes/OrokinMoon01.png" },
+      "moon-earth": { "file": "Images/Skyboxes/OrokinMoon02.png" },
+      "asteroids": { "file": "Images/Skyboxes/FortressBG01.png" },
+      "doorway": { "file": "Images/Whispers in the Walls_ Captura Wallpapers/Intruder.png" },
+      "excalibur-prime": { "file": "Key Art/Prime Access Key Art/ExcaliburPrime.jpg", "crop": "iw*0.6:ih:iw*0.4:0" },
+      "mag-prime": { "file": "Key Art/Prime Access Key Art/Mag&Nova_MagIndividualPack.jpg" },
+      "volt-prime": { "file": "Key Art/Prime Access Key Art/PrimeVault_Volt_Keyart_1080p_V02.jpg" },
+      "plains": { "file": "Key Art/Updates Key Art/PlainsOfEidolon_Remaster_Keyart.png" },
+      "vallis": { "file": "Images/Zoom Backgrounds/Holiday 2020/WF_HolidayZoomBackground04_1920x1080.jpg" },
+      "cambion": { "file": "Images/Zoom Backgrounds/WF_ZoomBackground_DeimosSunWorm.jpg" },
+      "battle-wide": { "file": "Key Art/Updates Key Art/Empyrean_Keyart_UltraWide.png", "widths": [1920, 3600] },
+      "grineer": { "file": "Key Art/Updates Key Art/Ghouls_KeyArt_1080p.png" },
+      "corpus": { "file": "Key Art/Updates Key Art/DeadlockProtocol_Keyart.png" },
+      "infested": { "file": "Key Art/Updates Key Art/DeimosArcana_Keyart.png" },
+      "speed": { "file": "Key Art/Updates Key Art/SaintOfAltra_Keyart.png" },
+      "orbiter": { "file": "Images/Zoom Backgrounds/WF_ZoomBackground_Orbiter.jpg" }
+    }
+  },
+  "cutouts": {
+    "heights": [900, 1600],
+    "items": {
+      "cryopod": { "file": "Images/Misc/CryoPod.png" },
+      "xiphos": { "file": "Images/Misc/LandingCraft_Xiphos.png" },
+      "archwing": { "file": "Images/Misc/Archwing_Odonata.png" },
+      "excalibur-prime-render": { "file": "Images/Warframes/Prime Warframes/ExcaliburPrime.png" }
+    }
+  }
+}

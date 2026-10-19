@@ -1,0 +1,42 @@
+:root {
+  /* Palette */
+  --void: #07090e;
+  --navy: #0b1220;
+  --gunmetal: #171d27;
+  --silver: #d8dee8;
+  --white: #f5f7fb;
+  --cyan: #62e7f2;
+  --gold: #d6b66e;
+  --crimson: #c84b59;
+
+  --silver-dim: rgb(216 222 232 / 0.62);
+  --line: rgb(216 222 232 / 0.16);
+  --line-strong: rgb(216 222 232 / 0.32);
+  --cyan-soft: rgb(98 231 242 / 0.18);
+  --gold-soft: rgb(214 182 110 / 0.2);
+
+  /* Type */
+  --font-display: 'Michroma', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Manrope Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+  --text-mega: clamp(2.75rem, 0.5rem + 11.5vw, 12rem);
+  --text-hero: clamp(2.1rem, 0.8rem + 5.2vw, 6rem);
+  --text-title: clamp(1.5rem, 0.8rem + 2.6vw, 3.5rem);
+  --text-lead: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem);
+  --text-body: clamp(0.98rem, 0.94rem + 0.2vw, 1.08rem);
+  --text-label: 0.72rem;
+
+  /* Space */
+  --gutter: clamp(1rem, 0.5rem + 3vw, 4rem);
+  --header-h: 4rem;
+
+  /* Motion (CSS side; JS mirrors these in src/motion/motion.ts) */
+  --dur-micro: 200ms;
+  --dur-reveal: 600ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --z-bg: 0;
+  --z-scene: 1;
+  --z-ui: 50;
+}

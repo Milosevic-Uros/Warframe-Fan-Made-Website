@@ -1,0 +1,292 @@
+/* A chapter is a stretch of scroll; its frame holds the captions over the fixed film. */
+.chapter {
+  position: relative;
+  z-index: 2;
+  height: calc((var(--len) + 1) * 100vh);
+}
+
+.chapter__frame {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Captions sit inside the letterboxed picture area. */
+.cap {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  pointer-events: auto;
+  text-shadow:
+    0 1px 2px rgb(0 0 0 / 0.75),
+    0 0 30px rgb(0 0 0 / 0.6);
+}
+
+.cap--lower {
+  bottom: calc(var(--bar) + clamp(1.5rem, 6vh, 4rem));
+  max-width: 40rem;
+}
+
+.cap--upper {
+  top: calc(max(var(--bar), var(--header-h)) + clamp(1.25rem, 5vh, 3rem));
+  max-width: 44rem;
+}
+
+.cap--center {
+  top: 50%;
+  translate: 0 -50%;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cap--right {
+  left: auto;
+  width: min(30rem, calc(100% - 2 * var(--gutter)));
+}
+
+.cap--subtitle {
+  bottom: calc(var(--bar) + clamp(1.5rem, 7vh, 4.5rem));
+  text-align: center;
+  font-size: clamp(1.15rem, 0.9rem + 1.1vw, 1.9rem);
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.01em;
+}
+
+.cap__stack {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Centred titles get their own soft dark halo, whatever the plate behind them. */
+.cap--center::before {
+  content: '';
+  position: absolute;
+  inset: -18% -12%;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgb(7 9 14 / 0.62), rgb(7 9 14 / 0.25) 65%, transparent);
+  pointer-events: none;
+}
+
+.cap__huds {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 0.6rem;
+}
+
+.cap__title {
+  font-size: var(--text-hero);
+}
+
+.cap__mega {
+  display: grid;
+  line-height: 0.9;
+}
+
+.cap__mega-small {
+  font-family: var(--font-display);
+  font-size: var(--text-title);
+  color: var(--silver);
+  letter-spacing: 0.2em;
+}
+
+.cap__mega-big {
+  display: flex;
+  font-family: var(--font-display);
+  font-size: var(--text-mega);
+  letter-spacing: 0.06em;
+  color: var(--white);
+}
+
+.cap__letter {
+  display: inline-block;
+}
+
+.cap__name {
+  font-size: var(--text-title);
+}
+
+.cap__body {
+  color: var(--silver);
+  max-width: 38ch;
+}
+
+.cap__note {
+  font-size: 0.88rem;
+  color: var(--gold);
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--gold);
+}
+
+.cap__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cap__list li {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--line-strong);
+  background: rgb(7 9 14 / 0.45);
+  font-size: 0.82rem;
+  color: var(--white);
+  text-shadow: none;
+}
+
+.cap__hud {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.55rem 0.8rem;
+  border-left: 1px solid var(--cyan);
+  background: rgb(7 9 14 / 0.55);
+  max-width: 15rem;
+  text-shadow: none;
+}
+
+.cap__hud span:last-child {
+  font-size: 0.9rem;
+}
+
+.chapter__poster {
+  display: none;
+}
+
+/* Prime selector */
+.frame-nav {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.frame-nav button {
+  min-height: 44px;
+  padding: 0 0.9rem;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: rgb(7 9 14 / 0.5);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--silver-dim);
+  cursor: pointer;
+  transition:
+    color var(--dur-micro) var(--ease-out),
+    border-color var(--dur-micro) var(--ease-out);
+}
+
+.frame-nav button:hover,
+.frame-nav button[aria-current='true'] {
+  color: var(--white);
+  border-color: var(--gold);
+}
+
+@media (max-width: 767px) {
+  .cap--right {
+    left: var(--gutter);
+    width: auto;
+  }
+
+  .frame-nav button {
+    padding: 0 0.6rem;
+    font-size: 0.6rem;
+  }
+}
+
+/* ------------------------------------------------- reduced motion: a plain story */
+
+html[data-motion='reduced'] .chapter {
+  height: auto;
+  padding: calc(var(--header-h) + 3rem) 0 4rem;
+}
+
+html[data-motion='reduced'] .chapter__frame {
+  position: relative;
+  height: auto;
+  overflow: visible;
+  display: grid;
+  gap: 2rem;
+  padding: 0 var(--gutter);
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+html[data-motion='reduced'] .cap {
+  position: static;
+  translate: none;
+  max-width: none;
+  width: auto;
+  text-align: left;
+  justify-items: start;
+}
+
+html[data-motion='reduced'] .chapter__poster {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+/* Final call to action */
+.resolve__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 2rem;
+  margin-top: 0.5rem;
+  pointer-events: auto;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 52px;
+  padding: 0 1.6rem;
+  background: var(--gold);
+  color: var(--void);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  transition:
+    background-color var(--dur-micro) var(--ease-out),
+    transform var(--dur-micro) var(--ease-out);
+}
+
+.button svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.button:hover {
+  background: var(--white);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:focus-visible {
+  outline-offset: 6px;
+}
+
+/* clip-path would cut the focus outline; draw focus with a ring behind instead. */
+.resolve__actions .button:focus-visible {
+  clip-path: none;
+}
+

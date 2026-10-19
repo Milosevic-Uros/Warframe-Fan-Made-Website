@@ -1,0 +1,254 @@
+{
+  "orbit": [
+    {
+      "file": "orbit-1280w.webp",
+      "label": "1280w",
+      "kb": 76
+    },
+    {
+      "file": "orbit-2400w.webp",
+      "label": "2400w",
+      "kb": 218
+    }
+  ],
+  "moon-ruins": [
+    {
+      "file": "moon-ruins-1280w.webp",
+      "label": "1280w",
+      "kb": 40
+    },
+    {
+      "file": "moon-ruins-2400w.webp",
+      "label": "2400w",
+      "kb": 92
+    }
+  ],
+  "moon-earth": [
+    {
+      "file": "moon-earth-1280w.webp",
+      "label": "1280w",
+      "kb": 45
+    },
+    {
+      "file": "moon-earth-2400w.webp",
+      "label": "2400w",
+      "kb": 105
+    }
+  ],
+  "asteroids": [
+    {
+      "file": "asteroids-1280w.webp",
+      "label": "1280w",
+      "kb": 46
+    },
+    {
+      "file": "asteroids-2400w.webp",
+      "label": "2400w",
+      "kb": 107
+    }
+  ],
+  "doorway": [
+    {
+      "file": "doorway-1280w.webp",
+      "label": "1280w",
+      "kb": 101
+    },
+    {
+      "file": "doorway-2400w.webp",
+      "label": "2400w",
+      "kb": 297
+    }
+  ],
+  "excalibur-prime": [
+    {
+      "file": "excalibur-prime-1280w.webp",
+      "label": "1280w",
+      "kb": 107
+    },
+    {
+      "file": "excalibur-prime-2400w.webp",
+      "label": "2400w",
+      "kb": 233
+    }
+  ],
+  "mag-prime": [
+    {
+      "file": "mag-prime-1280w.webp",
+      "label": "1280w",
+      "kb": 48
+    },
+    {
+      "file": "mag-prime-2400w.webp",
+      "label": "2400w",
+      "kb": 140
+    }
+  ],
+  "volt-prime": [
+    {
+      "file": "volt-prime-1280w.webp",
+      "label": "1280w",
+      "kb": 93
+    },
+    {
+      "file": "volt-prime-2400w.webp",
+      "label": "2400w",
+      "kb": 247
+    }
+  ],
+  "plains": [
+    {
+      "file": "plains-1280w.webp",
+      "label": "1280w",
+      "kb": 124
+    },
+    {
+      "file": "plains-2400w.webp",
+      "label": "2400w",
+      "kb": 363
+    }
+  ],
+  "vallis": [
+    {
+      "file": "vallis-1280w.webp",
+      "label": "1280w",
+      "kb": 143
+    },
+    {
+      "file": "vallis-2400w.webp",
+      "label": "2400w",
+      "kb": 391
+    }
+  ],
+  "cambion": [
+    {
+      "file": "cambion-1280w.webp",
+      "label": "1280w",
+      "kb": 78
+    },
+    {
+      "file": "cambion-2400w.webp",
+      "label": "2400w",
+      "kb": 261
+    }
+  ],
+  "battle-wide": [
+    {
+      "file": "battle-wide-1920w.webp",
+      "label": "1920w",
+      "kb": 134
+    },
+    {
+      "file": "battle-wide-3600w.webp",
+      "label": "3600w",
+      "kb": 344
+    }
+  ],
+  "grineer": [
+    {
+      "file": "grineer-1280w.webp",
+      "label": "1280w",
+      "kb": 96
+    },
+    {
+      "file": "grineer-2400w.webp",
+      "label": "2400w",
+      "kb": 268
+    }
+  ],
+  "corpus": [
+    {
+      "file": "corpus-1280w.webp",
+      "label": "1280w",
+      "kb": 86
+    },
+    {
+      "file": "corpus-2400w.webp",
+      "label": "2400w",
+      "kb": 244
+    }
+  ],
+  "infested": [
+    {
+      "file": "infested-1280w.webp",
+      "label": "1280w",
+      "kb": 122
+    },
+    {
+      "file": "infested-2400w.webp",
+      "label": "2400w",
+      "kb": 339
+    }
+  ],
+  "speed": [
+    {
+      "file": "speed-1280w.webp",
+      "label": "1280w",
+      "kb": 98
+    },
+    {
+      "file": "speed-2400w.webp",
+      "label": "2400w",
+      "kb": 265
+    }
+  ],
+  "orbiter": [
+    {
+      "file": "orbiter-1280w.webp",
+      "label": "1280w",
+      "kb": 89
+    },
+    {
+      "file": "orbiter-2400w.webp",
+      "label": "2400w",
+      "kb": 213
+    }
+  ],
+  "cryopod": [
+    {
+      "file": "cryopod-900h.webp",
+      "label": "900h",
+      "kb": 75
+    },
+    {
+      "file": "cryopod-1600h.webp",
+      "label": "1600h",
+      "kb": 76
+    }
+  ],
+  "xiphos": [
+    {
+      "file": "xiphos-900h.webp",
+      "label": "900h",
+      "kb": 77
+    },
+    {
+      "file": "xiphos-1600h.webp",
+      "label": "1600h",
+      "kb": 69
+    }
+  ],
+  "archwing": [
+    {
+      "file": "archwing-900h.webp",
+      "label": "900h",
+      "kb": 78
+    },
+    {
+      "file": "archwing-1600h.webp",
+      "label": "1600h",
+      "kb": 101
+    }
+  ],
+  "excalibur-prime-render": [
+    {
+      "file": "excalibur-prime-render-900h.webp",
+      "label": "900h",
+      "kb": 61
+    },
+    {
+      "file": "excalibur-prime-render-1600h.webp",
+      "label": "1600h",
+      "kb": 94
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+.progress {
+  --progress: 0;
+  position: fixed;
+  z-index: var(--z-ui);
+  right: calc(var(--gutter) * 0.5);
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.progress__count {
+  writing-mode: vertical-rl;
+  letter-spacing: 0.25em;
+}
+
+.progress__track {
+  position: relative;
+  width: 1px;
+  height: min(40vh, 22rem);
+  background: var(--line);
+}
+
+.progress__fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, var(--gold), var(--cyan));
+  transform: scaleY(var(--progress));
+  transform-origin: top;
+}
+
+.progress__tick {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--at) * 100%);
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--line-strong);
+  background: var(--void);
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition:
+    border-color var(--dur-micro) var(--ease-out),
+    background-color var(--dur-micro) var(--ease-out);
+}
+
+.progress__tick.is-passed {
+  border-color: var(--cyan);
+  background: var(--cyan);
+}
+
+/* Narrow screens: a thin bar under the header instead of a side rail. */
+@media (max-width: 767px) {
+  .progress {
+    inset: var(--header-h) 0 auto;
+    top: var(--header-h);
+    flex-direction: row;
+    gap: 0;
+    height: 8px;
+    overflow: hidden;
+    transform: none;
+  }
+
+  .progress__count {
+    display: none;
+  }
+
+  .progress__track {
+    width: 100%;
+    height: 2px;
+  }
+
+  .progress__fill {
+    background: linear-gradient(to right, var(--gold), var(--cyan));
+    transform: scaleX(var(--progress));
+    transform-origin: left;
+  }
+
+  .progress__tick {
+    top: 50%;
+    left: calc(var(--at) * 100%);
+    width: 5px;
+    height: 5px;
+  }
+}

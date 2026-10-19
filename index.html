@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wake, Tenno — A Fan-Made Journey Through the Origin System</title>
+    <meta
+      name="description"
+      content="An unofficial, fan-made scroll film inspired by Warframe: wake in orbit, cross the Void, meet the Prime Warframes and the worlds of the Origin System."
+    />
+    <meta name="theme-color" content="#07090E" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Wake, Tenno — A Fan-Made Journey" />
+    <meta
+      property="og:description"
+      content="An unofficial, fan-made scroll story inspired by Warframe. Not affiliated with Digital Extremes."
+    />
+    <meta property="og:image" content="/media/orbit-1280w.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" as="image" href="/media/orbit-2400w.webp" imagesrcset="/media/orbit-1280w.webp 1280w, /media/orbit-2400w.webp 2400w" imagesizes="100vw" fetchpriority="high" />
+
+    <script>
+      // Apply a stored motion preference before first paint so CSS can respond immediately.
+      try {
+        var m = localStorage.getItem('tenno-motion')
+        var reduced = m ? m === 'reduced' : matchMedia('(prefers-reduced-motion: reduce)').matches
+        document.documentElement.dataset.motion = reduced ? 'reduced' : 'full'
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding:2rem;color:#D8DEE8;background:#07090E;font-family:sans-serif">
+        This fan-made story needs JavaScript. Visit the official game site at
+        <a style="color:#62E7F2" href="https://www.warframe.com/">warframe.com</a>.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
